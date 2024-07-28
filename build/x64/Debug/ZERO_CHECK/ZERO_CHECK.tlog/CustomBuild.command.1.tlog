@@ -1,0 +1,10 @@
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\CMAKEFILES\284C9E3F3896E6ABAD840C102AE4A2AE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/lolek/Desktop/prj2/LightYears -BC:/Users/lolek/Desktop/prj2/LightYears/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/lolek/Desktop/prj2/LightYears/build/LightYears.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
