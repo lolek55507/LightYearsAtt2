@@ -1,0 +1,10 @@
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\C1B6C2DBF37E1239CC88D68DB66EC18E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild -BC:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

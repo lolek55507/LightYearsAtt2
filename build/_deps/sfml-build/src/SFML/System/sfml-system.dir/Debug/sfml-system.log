@@ -1,0 +1,20 @@
+﻿  Building Custom Rule C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-src/src/SFML/System/CMakeLists.txt
+  Clock.cpp
+  Err.cpp
+  Lock.cpp
+  Mutex.cpp
+  Sleep.cpp
+  String.cpp
+  Thread.cpp
+  ThreadLocal.cpp
+  Time.cpp
+  FileInputStream.cpp
+  MemoryInputStream.cpp
+  ClockImpl.cpp
+  MutexImpl.cpp
+  SleepImpl.cpp
+  ThreadImpl.cpp
+  ThreadLocalImpl.cpp
+  Generating Code...
+     Creating library C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-build/lib/Debug/sfml-system-d.lib and object C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-build/lib/Debug/sfml-system-d.exp
+  sfml-system.vcxproj -> C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build\lib\Debug\sfml-system-d-2.dll

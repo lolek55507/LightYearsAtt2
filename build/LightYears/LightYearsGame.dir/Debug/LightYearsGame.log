@@ -1,3 +1,3 @@
-﻿  Building Custom Rule C:/Users/lolek/Desktop/prj2/LightYears/LightYears/CMakeLists.txt
-  main.cpp
-  LightYearsGame.vcxproj -> C:\Users\lolek\Desktop\prj2\LightYears\build\LightYears\Debug\LightYearsGame.exe
+﻿  EntryPoint.cpp
+EntryPoint.obj : error LNK2019: unresolved external symbol "class ly::Application * __cdecl GetApplication(void)" (?GetApplication@@YAPEAVApplication@ly@@XZ) referenced in function main
+C:\Users\lolek\Desktop\prj2\LightYears\build\LightYears\Debug\LightYearsGame.exe : fatal error LNK1120: 1 unresolved externals

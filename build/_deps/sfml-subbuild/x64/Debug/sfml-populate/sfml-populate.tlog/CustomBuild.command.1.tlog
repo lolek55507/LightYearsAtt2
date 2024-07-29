@@ -1,0 +1,150 @@
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\lolek\Desktop\prj2\LightYears\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-UPDATE.RULE
+setlocal
+cd C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\B293F2E67F781BC0260B902E1479CC23\SFML-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\338AED90E581CDAA1E9C7F3725B7A53A\SFML-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/Debug/sfml-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\C1B6C2DBF37E1239CC88D68DB66EC18E\SFML-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LOLEK\DESKTOP\PRJ2\LIGHTYEARS\BUILD\_DEPS\SFML-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild -BC:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild --check-stamp-file C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

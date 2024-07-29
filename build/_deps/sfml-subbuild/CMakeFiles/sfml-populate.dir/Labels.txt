@@ -1,0 +1,14 @@
+# Target labels
+ sfml-populate
+# Source files and their labels
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/c1b6c2dbf37e1239cc88d68db66ec18e/sfml-populate.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/338aed90e581cdaa1e9c7f3725b7a53a/sfml-populate-complete.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-build.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-configure.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-download.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-install.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-mkdir.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-patch.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-test.rule
+C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/sfml-subbuild/CMakeFiles/b293f2e67f781bc0260b902e1479cc23/sfml-populate-update.rule
