@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\45b6d6b47a115ef35ecfa9dca9f79359\box2d-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\114ecb461ab6731940ad52c15a261553\box2d-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\8bcf6b0130a19031ef88fa74a109a798\box2d-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-subbuild\CMakeFiles\box2d-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{52F525D7-1864-3D16-A11C-D9BB47A28DAB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

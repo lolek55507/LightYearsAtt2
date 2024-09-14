@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -99,16 +99,16 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;B2_SHARED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;B2_SHARED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -116,9 +116,18 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsEngine/Debug C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/assets C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/Debug/assets
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -128,7 +137,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\LightYearsEngine\Debug\LightYearsEngine.lib;..\_deps\sfml-build\lib\Debug\sfml-graphics-d.lib;..\_deps\sfml-build\lib\Debug\sfml-window-d.lib;..\_deps\sfml-build\lib\Debug\sfml-audio-d.lib;..\_deps\sfml-build\lib\Debug\sfml-system-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\LightYearsEngine\Debug\LightYearsEngine.lib;..\_deps\sfml-build\lib\Debug\sfml-graphics-d.lib;..\_deps\sfml-build\lib\Debug\sfml-window-d.lib;..\_deps\sfml-build\lib\Debug\sfml-audio-d.lib;..\_deps\sfml-build\lib\Debug\sfml-system-d.lib;..\_deps\box2d-build\bin\Debug\box2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -143,7 +152,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -155,18 +164,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_SHARED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_SHARED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -174,9 +183,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsEngine/Release C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/assets C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/Release/assets
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -186,7 +204,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\LightYearsEngine\Release\LightYearsEngine.lib;..\_deps\sfml-build\lib\Release\sfml-graphics.lib;..\_deps\sfml-build\lib\Release\sfml-window.lib;..\_deps\sfml-build\lib\Release\sfml-audio.lib;..\_deps\sfml-build\lib\Release\sfml-system.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\LightYearsEngine\Release\LightYearsEngine.lib;..\_deps\sfml-build\lib\Release\sfml-graphics.lib;..\_deps\sfml-build\lib\Release\sfml-window.lib;..\_deps\sfml-build\lib\Release\sfml-audio.lib;..\_deps\sfml-build\lib\Release\sfml-system.lib;..\_deps\box2d-build\bin\Release\box2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -201,7 +219,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -213,18 +231,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_SHARED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_SHARED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -232,9 +250,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsEngine/MinSizeRel C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/assets C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/MinSizeRel/assets
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -244,7 +271,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\LightYearsEngine\MinSizeRel\LightYearsEngine.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-graphics.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-window.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-audio.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-system.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\LightYearsEngine\MinSizeRel\LightYearsEngine.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-graphics.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-window.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-audio.lib;..\_deps\sfml-build\lib\MinSizeRel\sfml-system.lib;..\_deps\box2d-build\bin\MinSizeRel\box2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -259,7 +286,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -272,16 +299,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_SHARED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_SHARED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include;C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-src\include;C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -289,9 +316,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsEngine/RelWithDebInfo C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/assets C:/Users/lolek/Desktop/prj2/LightYears/build/LightYearsGame/RelWithDebInfo/assets
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -301,7 +337,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\LightYearsEngine\RelWithDebInfo\LightYearsEngine.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-graphics.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-window.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-audio.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-system.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\LightYearsEngine\RelWithDebInfo\LightYearsEngine.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-graphics.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-window.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-audio.lib;..\_deps\sfml-build\lib\RelWithDebInfo\sfml-system.lib;..\_deps\box2d-build\bin\RelWithDebInfo\box2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -327,7 +363,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\config.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/CMakeLists.txt</Message>
@@ -340,7 +376,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\config.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/CMakeLists.txt</Message>
@@ -353,7 +389,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\config.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/lolek/Desktop/prj2/LightYears/LightYearsGame/CMakeLists.txt</Message>
@@ -366,7 +402,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\config.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -374,6 +410,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\gameFramework\GameApplication.h" />
     <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\gameFramework\GameApplication.cpp" />
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\spaceship\SpaceShip.h" />
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\spaceship\SpaceShip.cpp" />
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\player\PlayerSpaceShip.h" />
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\player\PlayerSpaceShip.cpp" />
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\weapon\Shooter.h" />
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\Shooter.cpp" />
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\weapon\BulletShooter.h" />
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\BulletShooter.cpp" />
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\weapon\Bullet.h" />
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\bullet.cpp" />
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\gameplay\HealthComponent.h" />
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\HealthComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\lolek\Desktop\prj2\LightYears\build\ZERO_CHECK.vcxproj">
@@ -385,6 +433,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.vcxproj">
       <Project>{4AE99893-6216-31CE-BD55-BCE52F880294}</Project>
       <Name>LightYearsEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-build\src\box2d.vcxproj">
+      <Project>{26509561-A62E-3438-BE09-1877E2AA2A99}</Project>
+      <Name>box2d</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
       <Project>{7AEAE085-1B58-3DEC-B1A2-1A4F96409AD1}</Project>

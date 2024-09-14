@@ -1,1 +1,7 @@
 C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\gameFramework\GameApplication.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\GameApplication.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\spaceship\SpaceShip.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\SpaceShip.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\player\PlayerSpaceShip.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\PlayerSpaceShip.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\Shooter.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\Shooter.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\BulletShooter.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\BulletShooter.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\bullet.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\bullet.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\HealthComponent.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsGame\LightYearsGame.dir\Debug\HealthComponent.obj

@@ -1,0 +1,29 @@
+﻿  Building Custom Rule C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/box2d-src/extern/simde/CMakeLists.txt
+  CMake is re-running because C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/box2d-build/extern/simde/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/box2d-src/extern/simde/CMakeLists.txt'
+    is newer than 'C:/Users/lolek/Desktop/prj2/LightYears/build/_deps/box2d-build/extern/simde/CMakeFiles/generate.stamp.depend'
+    result='0'
+  -- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.22631.
+  CMake Deprecation Warning at build/_deps/sfml-src/CMakeLists.txt:5 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+  
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+  
+  
+  CMake Warning (dev) at C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+    The package name passed to `find_package_handle_standard_args` (VORBIS)
+    does not match the name of the calling package (Vorbis).  This can lead to
+    problems in calling code that expects `find_package` result variables
+    (e.g., `_FOUND`) to follow a certain pattern.
+  Call Stack (most recent call first):
+    build/_deps/sfml-src/cmake/Modules/FindVorbis.cmake:25 (find_package_handle_standard_args)
+    build/_deps/sfml-src/cmake/Macros.cmake:279 (find_package)
+    build/_deps/sfml-src/src/SFML/Audio/CMakeLists.txt:70 (sfml_find_package)
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+  
+  -- Configuring done (2.1s)
+  -- Generating done (0.8s)
+  -- Build files have been written to: C:/Users/lolek/Desktop/prj2/LightYears/build
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): warning MSB8064: Custom build for item "C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-src\extern\simde\CMakeLists.txt" succeeded, but specified dependency "c:\users\lolek\desktop\prj2\lightyears\build\_deps\box2d-src\extern\simde\cmakelists.txt" does not exist. This may cause incremental build to work incorrectly.

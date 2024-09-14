@@ -4,9 +4,45 @@
     <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\gameFramework\GameApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\spaceship\SpaceShip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\player\PlayerSpaceShip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\Shooter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\BulletShooter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\src\weapon\HealthComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\gameFramework\GameApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\spaceship\SpaceShip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\player\PlayerSpaceShip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\weapon\Shooter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\weapon\BulletShooter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\weapon\Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsGame\include\gameplay\HealthComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

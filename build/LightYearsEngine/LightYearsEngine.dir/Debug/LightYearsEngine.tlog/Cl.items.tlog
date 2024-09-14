@@ -1,3 +1,10 @@
 C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Application.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\Application.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Actor.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\Actor.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Object.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\Object.obj
 C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Core.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\Core.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\World.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\World.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\AssetsManager.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\AssetsManager.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\MathUtility.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\MathUtility.obj
 C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\EntryPoint.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\EntryPoint.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\PhysicsSystem.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\PhysicsSystem.obj
+C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Delegate.cpp;C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\LightYearsEngine.dir\Debug\Delegate.obj

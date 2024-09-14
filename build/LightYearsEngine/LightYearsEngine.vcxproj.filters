@@ -4,10 +4,31 @@
     <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Actor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\AssetsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\MathUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\EntryPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\PhysicsSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\src\framework\Delegate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -15,10 +36,31 @@
     <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\Actor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\AssetsManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\MathUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\PhysicsSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lolek\Desktop\prj2\LightYears\LightYearsEngine\include\framework\Delegate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

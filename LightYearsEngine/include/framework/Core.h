@@ -1,7 +1,10 @@
+#pragma once
+
 #include <stdio.h>
 #include <memory>
 #include <map>
 #include <unordered_map>
+#include <unordered_set>
 namespace ly
 {
 	template<typename T>
@@ -21,7 +24,14 @@ namespace ly
 	using Map = std::map<keyType, valType, Pr>;
 
 	template<typename keyType, typename valType, typename Hasher = std::hash<keyType>>
-	using Dictionary = std::unordered_map<keyType, valType, Hasher>
+	using Dictionary = std::unordered_map<keyType, valType, Hasher>;
+
+	template<typename T>
+	using Set = std::unordered_set<T>;
+
+
+	using uint8 = unsigned char;
+
 // a macro
 #define LOG(M, ...) printf(M "\n", ##__VA_ARGS__)
 }

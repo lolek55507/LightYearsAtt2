@@ -1,2 +1,6 @@
-﻿  Application.cpp
+﻿  Actor.cpp
+  Object.cpp
+  PhysicsSystem.cpp
+  World.cpp
+  Generating Code...
   LightYearsEngine.vcxproj -> C:\Users\lolek\Desktop\prj2\LightYears\build\LightYearsEngine\Debug\LightYearsEngine.lib

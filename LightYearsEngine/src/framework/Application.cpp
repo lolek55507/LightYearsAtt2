@@ -1,13 +1,19 @@
 #include "framework/Application.h"
 #include "framework/Core.h"
+#include <framework/World.h>
+#include "framework/AssetsManager.h"
+#include "framework/PhysicsSystem.h"
 namespace ly
 {
-	Application::Application()
-		: mWindow{ sf::VideoMode(1024, 1440), "My WIndow" },
-		mTargetFrameRate{60.f},
-		mTickClock{}
-	{
 
+	Application::Application(unsigned int windowWidth, unsigned int windowHeight, const std::string& title, sf::Uint32 style)
+		: mWindow{ sf::VideoMode(windowWidth, windowHeight), title, style },
+		mTargetFrameRate{ 60.f },
+		mTickClock{},
+		currentWorld{ nullptr },
+		mCleanCycleClock{},
+		mCleanCycleInterval{2.f}
+	{
 	}
 
 	void Application::Run()
@@ -34,13 +40,33 @@ namespace ly
 				RenderInternal();
 			}
 			
-			LOG("Ticking at framerate: %f", 1.f / frameDeltaTime);
 
 		}
+	}
+	sf::Vector2u Application::GetWindowSize() const
+	{
+		return mWindow.getSize();
 	}
 	void Application::TickInternal(float deltaTime)
 	{
 		Tick(deltaTime);
+
+		if (currentWorld)
+		{
+			currentWorld->TickInternal(deltaTime);
+		}
+
+		PhysicsSystem::Get().Step(deltaTime);
+
+		if (mCleanCycleClock.getElapsedTime().asSeconds() >= mCleanCycleInterval)
+		{
+			mCleanCycleClock.restart();
+			AssetManager::Get().CleanCycle();
+			if (currentWorld)
+			{
+				currentWorld->CleanCycle();
+			}
+		}
 	}
 	void Application::RenderInternal()
 	{
@@ -52,17 +78,10 @@ namespace ly
 	}
 	void Application::Render()
 	{
-		
-
-		sf::CircleShape rect{ 100 };
-		rect.setFillColor(sf::Color::Green);
-		rect.setOrigin(50, 50);
-
-		rect.setPosition(mWindow.getSize().x / 2.f, mWindow.getSize().y / 2.f);
-
-		mWindow.draw(rect);
-
-		
+		if (currentWorld)
+		{
+			currentWorld->Render(mWindow);
+		}
 	}
 	void Application::Tick(float deltaTime)
 	{

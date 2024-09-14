@@ -195,7 +195,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\sfml-build\ALL_BUILD.vcxproj">
+    <ProjectReference Include="C:\Users\lolek\Desktop\prj2\LightYears\build\_deps\box2d-build\ALL_BUILD.vcxproj">
       <Project>{61166BFB-BB44-3C99-9C8F-FE28A25FC9AE}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
